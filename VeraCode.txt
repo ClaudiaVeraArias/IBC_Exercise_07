@@ -1,0 +1,11 @@
+#1) Write a function that returns the odd rows of any
+#dataframe passed as an argument
+
+        ## x is the data frame to analize
+        ## oddrow is the funtion which print all the odd rows from the data fra$
+
+oddrow <- function(x) {
+  rows <- x[c(TRUE, FALSE),]
+  return(rows)
+}
+
