@@ -32,3 +32,13 @@ species <- function(x)
   return(Table)
 }
 
+## 2.2) return a dataframe for flowers with Sepal.Width greater than a value specified by 
+          ## the function user
+
+y <- 2  # "y" is the size that the user has to determinated 
+
+Sepal_Width <- function(y) {
+  Width <- x[x$Sepal.Width > y,]
+  Width$y <- data.frame(Width)
+  return(Width$y)
+} 
