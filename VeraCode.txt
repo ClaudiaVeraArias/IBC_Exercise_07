@@ -9,3 +9,22 @@ oddrow <- function(x) {
   return(rows)
 }
 
+ 2) Repeat a subset of last week’s exercise, but write functions to accomplish these tasks.
+
+## set the working directory
+
+setwd('/Users/claudiaveraarias/Documents/ND_Classes/Fall_Semester_2019/Biocomputing/R/W10_BC')
+
+## 2.1) return the number of observations for a given species included in the data set
+	## print the number of observation (row) and the number of columns
+
+species <- function(x) 
+{
+  Seto <- x[x$Species == "setosa", ]
+  setosa <- dim(Seto)
+  Vers <- x[x$Species == "versicolor", ]
+  versicolor <- dim(Vers)
+  Virg <- x[x$Species == "virginica", ]
+  virginica <-dim(Virg)
+  return(c(setosa, versicolor, virginica))
+}
