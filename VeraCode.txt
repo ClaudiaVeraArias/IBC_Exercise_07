@@ -21,10 +21,14 @@ setwd('/Users/claudiaveraarias/Documents/ND_Classes/Fall_Semester_2019/Biocomput
 species <- function(x) 
 {
   Seto <- x[x$Species == "setosa", ]
-  setosa <- dim(Seto)
+  setosa <- nrow(Seto) # setosa observation
   Vers <- x[x$Species == "versicolor", ]
-  versicolor <- dim(Vers)
+  versicolor <- nrow(Vers) # versicolor observations
   Virg <- x[x$Species == "virginica", ]
-  virginica <-dim(Virg)
-  return(c(setosa, versicolor, virginica))
+  virginica <- nrow(Virg) # virginica observation
+  Names <- c("Setosa", "Versicolor", "Virginica")
+  Observations <- c(setosa, versicolor, virginica)
+  Table <- data.frame(cbind(Names, Observations))
+  return(Table)
 }
+
