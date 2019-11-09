@@ -38,7 +38,7 @@ species <- function(x)
 y <- 2  # "y" is the size that the user has to determinated 
 
 Sepal_Width <- function(y) {
-  Width <- x[x$Sepal.Width > y,]
-  Width$y <- data.frame(Width)
-  return(Width$y)
+  z <- x[x$Sepal.Width > y,]
+  Width <- data.frame(z)
+  return(Width)
 } 
