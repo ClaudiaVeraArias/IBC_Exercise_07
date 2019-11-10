@@ -1,22 +1,26 @@
-#1) Write a function that returns the odd rows of any
-#dataframe passed as an argument
+#EXERCISE 7
 
-        ## x is the data frame to analize
-        ## oddrow is the funtion which print all the odd rows from the data fra$
+	## Set the working directory to the exercise 7 file
 
-oddrow <- function(x) {
+setwd('/pathway/IBC_Exercise_07/')
+
+	## 1) Write a function that returns the odd rows of any
+	   ## dataframe passed as an argument
+
+        ## "y" is the data frame to analyze as an argument
+        ## oddrow is the function which print all the odd rows from the data frame
+
+y <- data.frame(x = 1:7, y = 11:17, z = c("one", "uno", "two", "dos", "three", "tres", "cuatro"))
+
+oddrow <- function(y) {
   rows <- x[c(TRUE, FALSE),]
   return(rows)
 }
 
- 2) Repeat a subset of last week’s exercise, but write functions to accomplish these tasks.
+	## 2) Repeat a subset of last week’s exercise, but write functions to accomplish these tasks.
 
-## set the working directory
-
-setwd('/Users/claudiaveraarias/Documents/ND_Classes/Fall_Semester_2019/Biocomputing/R/W10_BC')
-
-## 2.1) return the number of observations for a given species included in the data set
-	## print the number of observation (row) and the number of columns
+	## 2.1) return the number of observations for a given species included in the data set
+	   ## function that print a table with the name of the specie and the number of observation (row) of each one
 
 species <- function(x) 
 {
@@ -32,13 +36,30 @@ species <- function(x)
   return(Table)
 }
 
-## 2.2) return a dataframe for flowers with Sepal.Width greater than a value specified by 
-          ## the function user
+	## 2.2) return a dataframe for flowers with Sepal.Width greater than a value specified by 
+           ## the function user
+	
+	## "y" is the Sepal.Width that the user has to determinated
 
-y <- 2  # "y" is the size that the user has to determinated 
+y <- 2 # Sepal.Wilth example  
 
 Sepal_Width <- function(y) {
   z <- x[x$Sepal.Width > y,]
   Width <- data.frame(z)
   return(Width)
 } 
+
+	## 2.3) write the data for a given species to a comma-delimited file with the given species 
+           ## name as the file name; Hint: look at paste() to add the .csv extension to your 
+           ## file in the for-loop.
+
+Data_Species <- function(x) {
+  Set <- x[x$Species == "setosa", ]
+  Setosa <- write.csv(Set, file = "Setosa.csv")
+  Ver <- x[x$Species == "versicolor", ]
+  Versicolor <- write.csv(Ver, file = "Versicolor.csv")
+  Vir <- x[x$Species == "virginica", ]
+  Virginica <- write.csv(Vir, file = "Virginica.csv")
+}
+
+
