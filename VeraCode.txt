@@ -19,6 +19,10 @@ oddrow <- function(y) {
 
 	## 2) Repeat a subset of last week’s exercise, but write functions to accomplish these tasks.
 
+	   ## x is the new name of the file iris.csv
+
+x <- read.csv('/User/path/iris.csv', header = TRUE)
+
 	## 2.1) return the number of observations for a given species included in the data set
 	   ## function that print a table with the name of the specie and the number of observation (row) of each one
 
