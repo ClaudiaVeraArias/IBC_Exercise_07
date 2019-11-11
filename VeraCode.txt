@@ -7,8 +7,8 @@ setwd('/pathway/IBC_Exercise_07/')
 	## 1) Write a function that returns the odd rows of any
 	   ## dataframe passed as an argument
 
-        ## "y" is the data frame to analyze as an argument
-        ## oddrow is the function which print all the odd rows from the data frame
+         ## "y" is the data frame to analyze as an argument
+       	 ## oddrow is the function which print all the odd rows from the data frame
 
 y <- data.frame(x = 1:7, y = 11:17, z = c("one", "uno", "two", "dos", "three", "tres", "cuatro"))
 
@@ -24,7 +24,7 @@ oddrow <- function(y) {
 x <- read.csv('/User/path/iris.csv', header = TRUE)
 
 	## 2.1) return the number of observations for a given species included in the data set
-	   ## function that print a table with the name of the specie and the number of observation (row) of each one
+	   ## function that print a table with the name of the specie and the number of observation (row) of each specie
 
 species <- function(x) 
 {
@@ -43,7 +43,7 @@ species <- function(x)
 	## 2.2) return a dataframe for flowers with Sepal.Width greater than a value specified by 
            ## the function user
 	
-	## "y" is the Sepal.Width that the user has to determinated
+	## "y" is the Sepal.Width that the user has to specified
 
 y <- 2 # Sepal.Wilth example  
 
@@ -54,11 +54,10 @@ Sepal_Width <- function(y) {
 } 
 
 	## 2.3) write the data for a given species to a comma-delimited file with the given species 
-           ## name as the file name; Hint: look at paste() to add the .csv extension to your 
-           ## file in the for-loop.
+           ## name as the file name.
 
-		## Data_Species is the function that create the new cvs files in the IBC_Exercise_07 
-		## directory  
+		## Data_Species is the function that create the new cvs files (one per each species) in 
+		## the IBC_Exercise_07 directory  
 
 Data_Species <- function(x) {
   Set <- x[x$Species == "setosa", ]
