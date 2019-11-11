@@ -53,6 +53,9 @@ Sepal_Width <- function(y) {
            ## name as the file name; Hint: look at paste() to add the .csv extension to your 
            ## file in the for-loop.
 
+		## Data_Species is the function that create the new cvs files in the IBC_Exercise_07 
+		## directory  
+
 Data_Species <- function(x) {
   Set <- x[x$Species == "setosa", ]
   Setosa <- write.csv(Set, file = "Setosa.csv")
@@ -62,84 +65,4 @@ Data_Species <- function(x) {
   Virginica <- write.csv(Vir, file = "Virginica.csv")
 }
 
-
-
-
-try to fixing
-
-Data_Species <- function(x) {
-  for(i in x) {
-    if(i=="setosa") {
-   paste0(i) <- subset(x, x$Species == paste0(i).csv)
-    }
-    if(i=="versicolor") {
-   paste0(i) <- subset(x, x$Species == paste0(i).csv)
-    }
-    if(i=="virginica") {
-   paste0(i) <- subset(x, x$Species == paste0(i).csv)
-    }
-  }
-}
-   
-   Setosa = "setosa"
-    Set <- x$Species
-      filter(x, filter = "setosa")
-    paste0("Specie-", Setosa, ".csv")
-  }
-}
-  Set <- x[x$Species == "setosa", ]
-  Setosa <- write.csv(Set, file = "Setosa.csv")
-  Ver <- x[x$Species == "versicolor", ]
-  Versicolor <- write.csv(Ver, file = "Versicolor.csv")
-  Vir <- x[x$Species == "virginica", ]
-  Virginica <- write.csv(Vir, file = "Virginica.csv")
-}
-
-
-i <- x
-b <- function(i) {
-  for (i in x) {
-  a <- i[x$Species == "setosa"] }
-  a2 <- write.csv(a, file = "Setosa.csv")
-  return(a2)
-}
-
-
-
-
-species <- function(filename) {
-  for (i in x$Species) {
-  if(i == "setosa") {
-    Set <- x[x$Species == "setosa", ]
-    Setosa <- write.csv(Set, file = "Setosa.csv") }
-    return(Setosa)
-    if(i =="versicolor") {
-    Ver <- x[x$Species == "versicolor", ]
-    Versicolor <- write.csv(Ver, file = "Versicolor.csv") }
-    return(Versicolor)
-    if(i == "virginica") {
-    Vir <- x[x$Species == "virginica", ]
-    Virginica <- write.csv(Vir, file = "Virginica.csv") }
-    return(Virginica)
-  }
-}
-    
-    
-  Set <- x[x$Species == "setosa", ]
-  Set2 <- paste(Set, sep = ",", collapse = NULL)
-  Ver <- x[x$Species == "versicolor", ]
-  Ver2 <- paste(Ver, sep = ",", collapse = NULL)
-  Vir <- x[x$Species == "virginica", ]
-  Vir2 <- paste(Vir, sep = ",", collapse = NULL)
-  return(c(Set2, Ver2, Vir2))
-  }
-}
-
-
-
-
-
-for (i in 1:150) {
-  write.csv(x, [,,,,i], "setosa.i.csv")
-}
 
