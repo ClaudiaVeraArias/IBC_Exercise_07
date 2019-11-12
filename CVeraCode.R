@@ -1,6 +1,6 @@
 #EXERCISE 7
 
-	## Set the working directory to the exercise 7 file
+	## Set the working directory to the exercise 7 directory
 
 setwd('/pathway/IBC_Exercise_07/')
 
@@ -10,10 +10,10 @@ setwd('/pathway/IBC_Exercise_07/')
          ## "y" is the data frame to analyze as an argument
        	 ## oddrow is the function which print all the odd rows from the data frame
 
-y <- data.frame(x = 1:7, y = 11:17, z = c("one", "uno", "two", "dos", "three", "tres", "cuatro"))
+y <- data.frame(x = 1:7, y = 11:17, z = c("one", "uno", "two", "dos", "three", "tres", "cuatro")) #example
 
 oddrow <- function(y) {
-  rows <- x[c(TRUE, FALSE),]
+  rows <- y[c(TRUE, FALSE),]
   return(rows)
 }
 
@@ -24,7 +24,8 @@ oddrow <- function(y) {
 x <- read.csv('/User/path/iris.csv', header = TRUE)
 
 	## 2.1) return the number of observations for a given species included in the data set
-	   ## function that print a table with the name of the specie and the number of observation (row) of each specie
+	   ## species function prints a table with the name of the specie and the number of observation (row) 
+	   ## of each specie
 
 species <- function(x) 
 {
